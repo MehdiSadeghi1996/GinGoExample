@@ -28,7 +28,7 @@ func (j jwtServices) GenerateToken(name string, admin bool) string {
 		name,
 		admin,
 		jwt.StandardClaims{
-			ExpiresAt: time.Now().Add(time.Hour * 48).Unix(),
+			ExpiresAt: time.Now().Add(time.Hour * 1).Unix(),
 			Issuer:    j.issure,
 			IssuedAt:  time.Now().Unix(),
 		},
